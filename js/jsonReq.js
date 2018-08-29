@@ -1,18 +1,15 @@
-var thePets =[
- {
-	"name":"Meowsalot",
-	"species":"cat",
-	"favFood":"tuna"
-	},
-	{
-	"name":"Barky",
-	"species":"dog",
-	"favFood":"carrots"
+/*Requast from json */
+var excessOpject = document.getElementById("animal-info");
+
+var ourRequest = new XMLHttpRequest();
+ourRequest.open('GET','https://learnwebcode.github.io/json-example/animals-1.json');
+ourRequest.onload = function() {
+	console.log(ourRequest.responseText);
 	}
-	]
- var excessOpject = document.getElementById("animal-info");
+	ourRequest.send();
  
  
- /*excess from Array and object */
  
-excessOpject.innerHTML ="<h1 >axcess from opject and Array </h1><br>"+thePets[0].name+"<br>" +thePets[0].species+"<br>"+thePets[0].favFood +"<hr>"+thePets[1].name+"<br>" +thePets[1].species+"<br>"+thePets[1].favFood ;
+ 
+ 
+
