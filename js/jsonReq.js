@@ -16,7 +16,8 @@ ourRequest.onload = function() {
 	});
 
 function renderHTML(data){
-	excessOpject.insertAdjacentHTML('beforeend','Talib Abd Alameer');
+	var htmlString = 'Talib Abd Alameer Hussan 2';
+	excessOpject.insertAdjacentHTML('beforeend',htmlString);
 	}
  
  
