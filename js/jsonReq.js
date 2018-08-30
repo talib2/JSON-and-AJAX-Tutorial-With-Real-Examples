@@ -20,7 +20,12 @@ function renderHTML(data){
 	var htmlString = '';
 	
 	for(var i=0;i<data.length;i++){
-		htmlString += "<p>"+data[i].name + " is a "+ data[i].species + " . </p>";
+		htmlString += "<p>"+data[i].name + " is a "+ data[i].species +' that likes to eat ';
+		
+		for (var j=0;j<data[i].foods.likes.length; j++){
+			htmlString += data[i].foods.likes[j];
+			}
+			htmlString +='</p>';
 		}
 	
 	excessOpject.insertAdjacentHTML('beforeend',htmlString);
