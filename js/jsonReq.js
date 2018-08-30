@@ -16,7 +16,12 @@ ourRequest.onload = function() {
 	});
 
 function renderHTML(data){
-	var htmlString = 'Talib Abd Alameer Hussan 2';
+	var htmlString = '';
+	
+	for(var i=0;i<data.length;i++){
+		htmlString += "<p>"+data[i].name + " is a "+ data[i].species + " . </p>";
+		}
+	
 	excessOpject.insertAdjacentHTML('beforeend',htmlString);
 	}
  
