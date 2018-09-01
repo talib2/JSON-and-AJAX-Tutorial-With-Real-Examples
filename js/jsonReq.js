@@ -1,4 +1,6 @@
-/*Requast from json */
+/*Requast from json 
+ * https://www.youtube.com/watch?v=rJesac0_Ftw&t=886s
+ * */
 var excessOpject = document.getElementById("animal-info");
 var btn = document.getElementById("btn");
 var pageCounter = 1;
@@ -23,8 +25,23 @@ function renderHTML(data){
 		htmlString += "<p>"+data[i].name + " is a "+ data[i].species +' that likes to eat ';
 		
 		for (var j=0;j<data[i].foods.likes.length; j++){
+			if(j == 0){
 			htmlString += data[i].foods.likes[j];
+		}else {
+			htmlString += " and " + data[i].foods.likes[j];
 			}
+			}
+			 
+			 htmlString += ' and dislikes ';
+			 
+			 for (var j=0;j<data[i].foods.dislikes.length; j++){
+			if(j == 0){
+			htmlString += data[i].foods.dislikes[j];
+		}else {
+			htmlString += " and " + data[i].foods.dislikes[j];
+			}
+		}
+			 
 			htmlString +='</p>';
 		}
 	
